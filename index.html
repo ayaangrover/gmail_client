@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Client</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">Email Client</div>
+            <input type="text" placeholder="Search emails" class="search-bar">
+            <button id="authorize_button">Sign In</button>
+            <button id="signout_button">Sign Out</button>
+        </header>
+        <main>
+            <nav>
+                <button id="compose_button" class="compose-btn">Compose</button>
+                <ul>
+                    <li id="inbox_button" class="active">Inbox</li>
+                    <li id="starred_button">Starred</li>
+                    <li id="sent_button">Sent</li>
+                    <li id="drafts_button">Drafts</li>
+                    <li id="trash_button">Trash</li>
+                </ul>
+            </nav>
+            <section class="email-container">
+                <div class="tabs">
+                    <button class="tab active" data-category="CATEGORY_PERSONAL">Primary</button>
+                    <button class="tab" data-category="CATEGORY_SOCIAL">Social</button>
+                    <button class="tab" data-category="CATEGORY_PROMOTIONS">Promotions</button>
+                    <button class="tab" data-category="CATEGORY_UPDATES">Updates</button>
+                    <button class="tab" data-category="CATEGORY_FORUMS">Forums</button>
+                </div>
+                <div id="email-list" class="email-list">
+                    <!-- Emails will be dynamically inserted here -->
+                </div>
+                <div id="email-detail" class="email-detail">
+                    <!-- Email details will be shown here -->
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="https://accounts.google.com/gsi/client"></script>
+    <script src="script.js"></script>
+</body>
+</html>
